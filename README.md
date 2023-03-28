@@ -21,6 +21,10 @@ VITE_AWS_SECRET =
 
 ## Prequiste
 Create a bucket in S3 and give  the necessary permisssion for the website to access it and create IAM user too
+
+## Screenshot
+![image](https://user-images.githubusercontent.com/65841021/228133372-beb65bf2-6cf9-466d-a9b0-5188eeb2e496.png)
+
 ## Install
 
 ```sh
