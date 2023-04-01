@@ -9,5 +9,12 @@ export default defineConfig({
   },
   define: {
     global: {},
-  }
+  },
+  build: {
+    commonjsOptions: { include: [] },
+  },
+  optimizeDeps: {
+    disabled: false,
+  },
+  
 })
