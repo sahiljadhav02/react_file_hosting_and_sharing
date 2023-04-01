@@ -35,14 +35,14 @@ const Pdf_Viewer = () => {
         accessKeyId:key,
         secretAccessKey: secret
       });
-      async function getFile(pdfKey) {
+       function getFile(pdfKey) {
         try {
           const params = {
             Bucket: bucket+"/pdf",
             Key: pdfKey
           };
       
-          const response = await s3.getSignedUrlPromise('getObject',params);
+          const response =  s3.getSignedUrlPromise('getObject',params);
           console.log('File retrieved successfully:', response);
           return response;
         } catch (err) {

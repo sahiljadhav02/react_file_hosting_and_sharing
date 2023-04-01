@@ -24,14 +24,14 @@ const VideoPlayer = () => {
         accessKeyId:key,
         secretAccessKey: secret
       });
-      async function getFile(videoKey) {
+      function getFile(videoKey) {
         try {
           const params = {
             Bucket: bucket+"/video",
             Key: videoKey
           };
       
-          const response = await s3.getSignedUrlPromise('getObject',params);
+          const response =  s3.getSignedUrlPromise('getObject',params);
           console.log('File retrieved successfully:', response);
           return response;
         } catch (err) {

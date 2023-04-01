@@ -8,8 +8,7 @@ const FileUpload = () => {
     return filename.substring(0, filename.lastIndexOf('.'));
   }
   function Extension(filename) {
-    console.log(filename);
-    return filename.substring(filename.lastIndexOf('.'),filename.length+1);
+    return filename.substring(filename.lastIndexOf('.')+1,filename.length+1);
   }
     const theme = Themes.getTheme("Default");
     const bucket = import.meta.env.VITE_AWS_BUCKET;

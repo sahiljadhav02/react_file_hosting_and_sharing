@@ -23,14 +23,14 @@ const ImageView = () => {
         accessKeyId:key,
         secretAccessKey: secret
       });
-    async function getFile(imageKey) {
+    function getFile(imageKey) {
         try {
           const params = {
             Bucket: bucket+"/image",
             Key: imageKey
           };
       
-          const response = await s3.getSignedUrlPromise('getObject',params);
+          const response = s3.getSignedUrlPromise('getObject',params);
           console.log('File retrieved successfully:', response);
           return response;
         } catch (err) {
