@@ -69,7 +69,7 @@ const FileUpload = () => {
         
         </Row>
         {resimg.result ? (
-          <a href={Extension(resimg.url)+"/"+removeExtension(resimg.url)}>Your Link is ready</a>
+          <a href={removeExtension(resimg.url)+"/"+Extension(resimg.url)}>Your Link is ready</a>
         ):(<p/>)
         }
         </Tab>

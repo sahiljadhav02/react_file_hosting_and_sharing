@@ -14,9 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Route path="/" element={<App />} />
   <Route path="/home" element={<App />} />
 
-    <Route path="/reactfile/image/:ext/:img/" element={<ImageView />} exact/>
+    <Route path="/reactfile/image/:img/:ext" element={<ImageView />} exact/>
     <Route path="/reactfile/pdf/:pdf" element={<Pdf_Viewer />} exact/>
-    <Route path="/reactfile/video/:ext/:vid" element={<VideoPlayer />} exact/>
+    <Route path="/reactfile/video/:vid/:ext" element={<VideoPlayer />} exact/>
     </Routes>
   </BrowserRouter>
   </React.StrictMode>,
