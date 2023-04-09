@@ -50,15 +50,19 @@ const Pdf_Viewer = () => {
           return null;
         }
       }
+      
 
   return (
 <div>
       {pdfUrl && <><Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
+        {Array.from( new Array(numPages),
+      (page,index) => (
+        <Page key={`page_${index+1}`}
+        pageNumber={index+1} />
+      )  
+        )}
       </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
+      
       </>}</div>)
 }
 
